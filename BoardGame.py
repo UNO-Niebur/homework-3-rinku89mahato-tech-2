@@ -10,7 +10,6 @@ def loadGameData(filename):
             data.append(line.strip())
     return data
 
-
 def saveGameData(filename, data):
     """updated game state back to the file"""
     with open(filename, "w") as file:

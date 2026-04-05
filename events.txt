@@ -1,5 +1,5 @@
-Turn: Player1
-43: Player1
+Turn: Player2
+44: Player1
 26: Player2
 12: Treasure
 37: Trap
