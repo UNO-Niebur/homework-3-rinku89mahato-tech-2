@@ -1,0 +1,28 @@
+Board Game System – Design DocumentName: Rinku MahatoDate: 04/03/2026
+1. Game OverviewThis project is a simple turn-based board game system created using Python. The purpose of this game is to demonstrate programming concepts such as file handling, functions, and basic game logic. The game allows multiple players to move across a board, interact with events, and take turns in an organized manner.The system reads and writes game data from a file, making it easy to track and update the game state.
+
+2. Game Rules* The game consists of multiple players placed on a numbered board.* Each player has a position stored in a file.* Players take turns in a fixed order (Player1 ? Player2 ? Player3 ? repeat).* On each turn, a player enters the number of steps to move forward.* The player’s position is updated accordingly.
+Event SpacesIf a player lands on a special position, an event may occur. However, in this program, events are not fully implemented or triggered. The main interactions focus on moving players and switching turns in Homework3.
+
+3. Data StorageThe game uses a text file (events.txt) to store all game data. Each line represents either the current turn or a board element.Example:Turn: Player13: Player14: Player217: Trap20: Treasure25: Heal
+
+Explanation:* Turn: PlayerX ? Indicates whose turn it is* Position: Name ? Represents players or events on the board
+This format allows easy reading and updating of game data.
+
+4. Program StructureThe program is divided into functions to improve organization and readability.
+Functions Used:* loadGameData(filename)Reads the file and stores each line into a list.
+* saveGameData(filename, data)Writes updated data back to the file.
+* displayGame(data)Prints the current game state to the console.
+* movePlayer(data)Handles user input, moves the player, and checks for events.
+* switchTurn(data)Updates the turn to the next player in sequence.
+* main()Controls the overall program flow and user interaction.
+
+5. Game Flow1. Load game data from the file
+2. Display the current game state
+3. Ask the user if they want to move a player
+4. If yes:o Verify it is the correct player’s turno Move the playero Check for event interactionso Switch to the next playero Save updated data
+5. Repeat until the user exits the program
+6. Design Decisions* A text file is used to store game data for simplicity* Game state is stored as a list of strings for easy processing* Turn management is handled separately for clarity* Events are treated as board elements rather than players
+7. Limitations* Movement is manually entered instead of randomized* No winning condition is implemented
+8. Future Improvements* Add dice rolling using random numbers* Implement event effects (e.g., skip turn, bonus moves)* Add a winning condition (e.g., reaching a certain position)* Improve the display to look more like a board* Add input validation to prevent errors
+9. ConclusionThis project successfully demonstrates the use of functions, file handling, and structured programming to build a simple board game system. The focus is on clarity, organization, and problem-solving rather than complexity.
